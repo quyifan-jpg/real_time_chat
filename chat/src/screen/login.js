@@ -7,9 +7,11 @@ function Login() {
     ? JSON.parse(localStorage.getItem('loginData'))
     : null
   )
+
   const handlefailure = (result)=>{
     alert(result)
   }
+  
   const handlelogin = async (googledata) =>{
     const res = await fetch('/api/google-login', {
       method: 'POST',
@@ -26,6 +28,7 @@ function Login() {
       console.log('pass')
     }
     const data = await res.json()
+    console.log(data)
     setloginData(data);
     localStorage.setItem('loginData', JSON.stringify(data))
   }
