@@ -1,5 +1,6 @@
 import React from 'react'
 import {Navbar, Container, Nav, NavDropdown} from "react-bootstrap"
+import {LinkContainer} from "react-router-bootstrap"
 function Navigation() {
   return (
     <Navbar bg="light" expand="lg">
@@ -8,6 +9,11 @@ function Navigation() {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
+      <LinkContainer to="/">
+                    <Navbar.Brand>
+                        hello
+                    </Navbar.Brand>
+                </LinkContainer>
         <Nav.Link href="#home">Home</Nav.Link>
         <Nav.Link href="#link">Link</Nav.Link>
         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
